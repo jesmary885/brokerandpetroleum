@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('phase');
             $table->string('commission')->nullable();
             $table->string('quantity')->nullable();
             $table->string('unity')->nullable();
@@ -25,6 +24,9 @@ return new class extends Migration
             $table->string('comments')->nullable();
             $table->string('activity')->nullable();
             $table->string('postal_code')->nullable();
+
+            $table->unsignedBigInteger('fase_id');
+            $table->foreign('fase_id')->references('id')->on('fases');
 
             $table->unsignedBigInteger('producto_id');
             $table->foreign('producto_id')->references('id')->on('productos');

@@ -20,12 +20,24 @@ class AdministracionController extends Controller
         return view('admin.categorias');
     }
 
+    public function estados(){
+        return view('admin.estados');
+    }
+
     public function solicitudes(){
         return view('admin.solicitudes');
     }
 
     public function negociaciones(){
         return view('admin.negociaciones');
+    }
+
+    public function fases(){
+        return view('admin.fases');
+    }
+
+    public function documentos(){
+        return view('admin.documentos');
     }
 
 }

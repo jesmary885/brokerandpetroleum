@@ -25,9 +25,9 @@
             <div class="hidden bg-cover lg:block lg:w-2/3" style='background-image: url(img/BALANCIN.jpg);'>
                 <div class="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
                     <div>
-                        <h2 class="text-4xl font-bold text-white">Broker&Petroleum</h2>
-                        
-                        <p class="max-w-xl mt-3 text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In autem ipsa, nulla laboriosam dolores, repellendus perferendis libero suscipit nam temporibus molestiae</p>
+                        <h2 class="text-5xl font-bold text-white">Inicio de sesión</h2>
+                    
+                    <p class="max-w-xl mt-5 text-gray-300">Bienvenido nuevamente, completa todos los campos e inicia sesión, para acceder a todas las opciones que ofrece nuestro portal.</p>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,9 @@
             <x-validation-errors class="mb-4" />
                 <div class="flex-1">
                     <div class="text-center">
-                        <h2 class="text-3xl font-bold text-center text-gray-700 dark:text-white">Broker&Petroleum</h2>
+                        <div class=" flex justify-center">
+                            <h2 class="text-4xl font-bold text-center text-gray-700 dark:text-white">Broker&Petroleum</h2>
+                        </div>
                         
                         <p class="mt-3 text-gray-500 dark:text-gray-300">Sign in to access your account</p>
                     </div>

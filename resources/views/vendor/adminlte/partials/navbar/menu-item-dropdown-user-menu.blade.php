@@ -71,10 +71,15 @@
                     {{ __('adminlte::menu.profile') }}
                 </a>
             @endif
+            <a href="{{route('inicio')}}" class="btn btn-default btn-flat btn-block">
+                <i class="fas fa-globe text-green mr-2"></i>
+                Ir a web
+            </a>
+            
             <a class="btn btn-default btn-flat float-right @if(!$profile_url) btn-block @endif"
                href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="fa fa-fw fa-power-off text-red"></i>
-                {{ __('adminlte::adminlte.log_out') }}
+                Cerrar sesión
             </a>
             <form id="logout-form" action="{{ $logout_url }}" method="POST" style="display: none;">
                 @if(config('adminlte.logout_method'))
@@ -83,10 +88,7 @@
                 {{ csrf_field() }}
             </form>
 
-            <a href="#" class="btn btn-default btn-flat btn-block">
-                <i class="far fa-credit-card text-green mr-2"></i>
-                Ir a web
-            </a>
+            
         </li>
 
     </ul>

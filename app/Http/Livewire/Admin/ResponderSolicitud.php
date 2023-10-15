@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Mail\SendMailResponse;
+use App\Models\Correo;
 use App\Models\Solicitudes;
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
@@ -52,8 +53,14 @@ class ResponderSolicitud extends Component
 
         ]);
 
-        $objDemo = new \stdClass();
+        $guardar_correo = new Correo();
+        $guardar_correo->comentario = $this->mensaje;
+        $guardar_correo->respuesta_adjunta = $carga_url;
+        $guardar_correo->respuesta_archivo = $url;
+        $guardar_correo->user_id = $this->solicitud->user->id;
+        $guardar_correo->save();
 
+        $objDemo = new \stdClass();
         $objDemo->mensaje = $this->mensaje;
         $objDemo->nombre_usuario = $this->solicitud->user->name;
         $objDemo->subject = 'respuesta de solicitud';

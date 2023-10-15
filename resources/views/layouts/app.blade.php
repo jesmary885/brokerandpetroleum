@@ -92,93 +92,46 @@
     <body class="font-sans antialiased">
        
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-100 relative">
             
             @livewire('navigation')
 
       
 
             <!-- Page Content -->
-            <main>
+            <main >
                 {{ $slot }}
             </main>
 
-            <footer>
-
-                <div class=" h-48 pt-4 pb-8 text-gray-200 bg-gray-400 text-center ">
-                    <div class="grid grid-cols-3 gap-6">
-                        <div>
-                            <p class="text-gray-800 font-bold text-lg mb-2">
-                                Legal
-                            </p>
-
-                            <p class="text-gray-500 font-bold text-md">
-                            Sobre nosotros
-                            </p>
-
-                            <p class="text-gray-500 font-bold text-md">
-                            Términos y condiciones
-                            </p>
-
-                            <p class="text-gray-500 font-bold text-md">
-                            política de privacidad
-                            </p>
-
-                        </div>
-
-                        <div>
-
-                            <p class="text-gray-800 font-bold text-lg mb-2">
-                                Encuentranos en:
-                            </p>
-
-                            <p class="text-gray-500 font-bold text-md text-justify">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dignissimos. Earum quam officiis itaque dolores maiores ab id ducimus rem, officia rerum possimus sit perspiciatis magnam, minima cum ipsum asperiores!
-                            </p>
-
-                          
-
-                            
-
-                        </div>
-
-                        <div>
-
-                            <p class="text-gray-800 font-bold text-lg mb-2">
-                                Siguenos en:
-                            </p>
-
-                            <div class="flex justify-center ">
-
-                                <div>
-                                    <i class="fab fa-instagram ml-2 mr-2 text-3xl font-bold text-gray-200"></i>
-                                </div>
-
-                                <div>
-                                    <i class="fab fa-facebook-square ml-2 mr-2 text-3xl font-bold text-gray-200"></i>
-                                </div>
-
-                                <div>
-                                    <i class="fab fa-twitter ml-2 mr-2 text-3xl font-bold text-gray-200"></i>
-                                </div>
-
-                            </div>
-
-                        
-
-                        </div>
-
+            <footer class="absolute left-0 bottom-0  bg-black pt-8 pb-6 w-full">
+                <div class="container mx-auto px-4">
+                  <div class="flex flex-wrap text-left lg:text-left">
+                    <div class="w-full lg:w-6/12 px-4">
+                      <h4 class="text-3xl fonat-semibold text-blueGray-200">¡Mantengámonos en contacto!</h4>
+                      <h5 class="text-lg mt-0 mb-2 text-blueGray-300">
+                        Encuéntranos en cualquiera de estas plataformas, respondemos 1-2 días hábiles.
+                      </h5>
+                      <div class="mt-6 lg:mb-0 mb-6">
+                        <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                          <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                          <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                          <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                          <i class="fab fa-github"></i>
+                        </button>
+                      </div>
                     </div>
-        
-                    
-</div>
-
-                <section class="h-12 p-4 text-gray-200 bg-black text-center">
-                    <h3 class="text-gray-300 text-md font-bold"> COPYRIGHT© 2023 - BROKERPREMIUM</h3>
-                    
-                </section>
-
-            </footer>
+              
+                  </div>
+                  <hr class="my-6 border-blueGray-300">
+                  <div class="flex flex-wrap items-center md:justify-between justify-center">
+                    <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                      <div class="text-sm text-blueGray-300 font-semibold py-1">
+                        Copyright © <span id="get-current-year">2023</span> Broker&Petroleum
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
 
         </div>
 
@@ -191,7 +144,7 @@
             function dropdown(){
                 return {
                     open: false,
-                    show_idioma(){
+                    show(){
                         if(this.open){
                             //Se cierra el menu
                             this.open = false;

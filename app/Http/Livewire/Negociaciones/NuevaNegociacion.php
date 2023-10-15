@@ -49,7 +49,7 @@ class NuevaNegociacion extends Component
         $this->validate($rules);
 
         $negociacion = new Negociacion();
-        $negociacion->phase = 'Primera';
+        $negociacion->fase_id = 1;
         $negociacion->user_id = auth()->user()->id;
         $negociacion->producto_id = $this->producto_id;
         $negociacion->comments = $this->mensaje;
@@ -61,6 +61,8 @@ class NuevaNegociacion extends Component
         $negociacion->save();
     
         $this->reset(['isopen','frecuencia','unidad','cantidad','uso','fecha_requerida','mensaje']);
+        $this->emitTo('negociaciones.index','render');
+
         $this->emit('alert','Solicitud procesada correctamente');
     }
 }

@@ -27,6 +27,10 @@
                         <th scope="col" class="px-6 py-3 text-center">
                             Detalle
                         </th>
+
+                        <th scope="col" class="px-6 py-3 text-center">
+                            AVANCES
+                        </th>
               
                         <th scope="col" class="px-6 py-3 text-center">
                             Action
@@ -44,7 +48,7 @@
                             {{$negociacion->created_at}}
                         </td>
                         <td class="px-6 py-2 text-center">
-                            {{$negociacion->phase}}
+                            {{$negociacion->fase->name}}
                         </td>
                         <td class="px-6 py-2 text-center">
                             {{$negociacion->user->name}}
@@ -53,6 +57,11 @@
                         <td class=" text-center">
                             @livewire('admin.detalle-negociacion', ['negociacion' => $negociacion],key($negociacion->id))
                         </td>
+
+                        <td class=" text-center">
+                            @livewire('admin.negociaciones-avances', ['negociacion' => $negociacion],key($negociacion->id))
+                        </td>
+
 
              
 

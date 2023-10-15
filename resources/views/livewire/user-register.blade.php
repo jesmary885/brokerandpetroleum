@@ -4,18 +4,22 @@
         <div class="hidden bg-cover lg:block lg:w-2/3" style='background-image: url(img/BALANCIN.jpg);'>
             <div class="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
                 <div>
-                    <h2 class="text-4xl font-bold text-white">Broker&Petroleum</h2>
+                    <h2 class="text-5xl font-bold text-white">Registro de usuario</h2>
                     
-                    <p class="max-w-xl mt-3 text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In autem ipsa, nulla laboriosam dolores, repellendus perferendis libero suscipit nam temporibus molestiae</p>
+                    <p class="max-w-xl mt-5 text-gray-300">Bienvenido, registrate en nuestro portal completando todos los datos.</p>
                 </div>
             </div>
         </div>
 
         <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
             <div class="w-full">
-                <h1 class="text-2xl font-semibold tracking-wider text-gray-800 capitalize dark:text-white">
-                    Registro de usuario
-                </h1>
+                <div class=" flex justify-center">
+                    <h1 class="text-4xl font-bold text-center text-gray-700 dark:text-white ">
+                        Broker&Petroleum
+                   </h1>
+
+                </div>
+                
 
                 <p class="mt-4 text-gray-500 dark:text-gray-400">
                     ¿Ya tienes una cuenta? Puedes iniciar sesión <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">

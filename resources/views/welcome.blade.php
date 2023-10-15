@@ -17,7 +17,7 @@
 
 
 
-<div class="flex justify-center md:-mt-44 ">
+<div class="flex justify-center lg:-mt-44 ">
 
     <h2 class="font-bold text-gray-600 text-2xl">
     {{__('messages.productos')}}
@@ -30,7 +30,9 @@
 
 
     <h3 class="font-semibold text-gray-400 text-md">
-    Enterate cuál es el listado de nuestros mejores productos
+
+      {{__('messages.subtitulo_productos')}}
+
     </h3>
 
 </div>
@@ -84,7 +86,7 @@
     @endif
 
 
-    <div class="bg-gray-200 mt-2 rounded-md">
+    {{-- <div class="bg-gray-200 mt-2 rounded-md">
         <div class="flex justify-between items-center py-28 px-5">
             <div class="w-1/2">
                 <h2 class="text-5xl font-semibold text-gray-800">SOBRE NOSOTROS</h2>
@@ -99,9 +101,9 @@
                
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <section class="relative mt-0  bg-blueGray-50">
+    <section class="relative mt-8  bg-blueGray-50 rounded-md mb-52 ">
 <div class="relative pt-8 pb-32 flex content-center items-center justify-center min-h-screen-75">
         <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
             background-image: url(img/fondo.jpg);
@@ -110,72 +112,78 @@
         </div>
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
-            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div class="pr-12">
-                <h1 class="text-white font-semibold text-5xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h1>
-                <p class="mt-4 text-lg text-blueGray-200">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate non, voluptates ratione illum architecto sint natus beatae exercitation
-                </p>
+            <div class=" ml-auto mr-auto w-full">
+              <div>
+                <div class="w-full text-center">
+                  <h1 class="text-white font-semibold text-5xl ">
+                    Somos Broker & Petroleum
+                  </h1>
+
+                </div>
+
+                <div class="w-full text-center mt-8">
+               
+                    <p class="mt-4 text-lg text-blueGray-200 lg:mx-52">
+                      Empresa encargada de comercializar y distribuir productos derivados del petróleo. Nuestro proposito principal es garantizar calidad de servicio y de producto, ofreciendo transparencia, confiabilidad, y los mejores precios del mercado. Somos un equipo de trabajo que constantemente se encuentra mejorando habilidades y conocimientos para satisfacer las crecientes y diversas necesidades de nuestros proveedores y clientes.
+                    </p>
+
+        
+                  
+
+                </div>
+                
+                
               </div>
             </div>
           </div>
         </div>
-        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
-          <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-            <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
-          </svg>
-        </div>
+       
       </div>
-      <section class="pb-10 bg-blueGray-200 -mt-24">
+      <section class="pb-10 bg-blueGray-200 -mt-32 md:-mt-60  " >
         <div class="container mx-auto px-4">
-          <div class="flex flex-wrap">
-            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+          <div class="flex flex-wrap  md:flex-nowrap  md:justify-center ">
+            <div class="lg:pt-12 pt-6 w-full md:w-6/12 px-4 text-center">
               <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div class="px-4 py-5 flex-auto">
                   <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                     <i class="fas fa-award"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
+                  <h6 class="text-xl font-semibold">Misión</h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum perspiciatis iure, rerum recusandae aspernatur ipsam architecto, consequatur
-                  </p>
+                    Buscar, abrir y asegurar mercados para garantizar un flujo comercial constante de materia  prima como lo es petróleo y sus derivados, dónde el resultado sea predecible para las refinerías y clientes con quienes operamos. 
                 </div>
               </div>
             </div>
             <div class="w-full md:w-4/12 px-4 text-center">
-              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                <div class="px-4 py-5 flex-auto">
-                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                    <i class="fas fa-retweet"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
-                  <p class="mt-2 mb-4 text-blueGray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum perspiciatis iure, rerum recusandae aspernatur ipsam architecto, consequatur
-                  </p>
-                </div>
-              </div>
+              
             </div>
-            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+            <div class="lg:pt-12 pt-6  w-full md:w-6/12 px-4 text-center">
               <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div class="px-4 py-5 flex-auto">
                   <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                    <i class="fas fa-fingerprint"></i>
+                    <i class="fas fa-award"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
+                  <h6 class="text-xl font-semibold">Visión</h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum perspiciatis iure, rerum recusandae aspernatur ipsam architecto, consequatur
+                  Ser el centro de formación líderes para el mercado petrolero en donde finanzas del mundo financiero, se afecten de manera positiva.
+                  </p>
+
+                  <p class=" mb-10  text-white">
+                  
+                  </p>
+
+                  <p class=" text-white">
+                    -
                   </p>
                 </div>
               </div>
             </div>
           </div>
-           <footer class="relative">
+ 
+      </section>
+      </section>
 
-</footer>
-      </section>
-      </section>
+      
 
 
 

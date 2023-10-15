@@ -64,7 +64,7 @@ return [
     */
 
     'logo' => null,
-    'logo_img' => 'img/LOGO_2.jpg',
+    'logo_img' => 'img/BROKER 1.jpg',
     'logo_img_class' => 'w-full h-full mx-auto my-0 d-block',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'null',
@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'oficina',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -313,12 +313,28 @@ return [
                     'icon'    => '	fas fa-circle',
                     'icon_color' => 'gray',
                 ],
+
                 [
-                    'text'    => 'Categorias',
-                    'route'     => 'oficina.categorias',
+                    'text'    => 'Fases',
+                    'route'     => 'oficina.admin.fases',
                     'icon'    => '	fas fa-circle',
                     'icon_color' => 'gray',
                 ],
+
+                [
+                    'text'    => 'Procesos y/o Documentación',
+                    'route'     => 'oficina.admin.documentos',
+                    'icon'    => '	fas fa-circle',
+                    'icon_color' => 'gray',
+                ],
+
+                [
+                    'text'    => 'Estados de Procesos y/o Documentación',
+                    'route'     => 'oficina.admin.estados',
+                    'icon'    => '	fas fa-circle',
+                    'icon_color' => 'gray',
+                ],
+                
                 [
                     'text'    => 'Solicitudes',
                     'route'     => 'oficina.admin.solicitudes',
@@ -331,6 +347,9 @@ return [
                     'icon'    => '	fas fa-circle',
                     'icon_color' => 'gray',
                 ],
+
+               
+                
 
             ],
         
@@ -366,13 +385,13 @@ return [
         ],
     ],
 
-    [
+  /*  [
         'text'    => 'Mensajes',
         'icon'    => '	fas fa-mail-bulk',
         'can' => 'oficina.index',
         'submenu' => [
             [
-                'text' => 'Entrantes',
+                'text' => '',
                 'icon'    => '	fas fa-circle',
                 'icon_color' => 'gray',
                 'route'  => 'oficina.mensajes_entrantes',
@@ -386,7 +405,7 @@ return [
             ],
 
         ],
-    ],
+    ],*/
 
     ],
 

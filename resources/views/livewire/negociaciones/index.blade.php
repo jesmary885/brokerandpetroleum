@@ -29,7 +29,7 @@
                         </th>
             
                         <th scope="col" class="px-6 py-3 text-center">
-                            Action
+                            Avances
                         </th>
                     </tr>
                 </thead>
@@ -44,7 +44,7 @@
                             {{$negociacion->created_at}}
                         </td>
                         <td class="px-6 py-2 text-center">
-                            {{$negociacion->phase}}
+                            {{$negociacion->fase->name}}
                         </td>
               
                         
@@ -52,11 +52,15 @@
                             @livewire('negociaciones.detalle-negociacion', ['negociacion' => $negociacion],key($negociacion->id))
                         </td>
 
-               
+                        <td class=" text-center">
+                            @livewire('admin.negociaciones-avances', ['negociacion' => $negociacion],key($negociacion->id))
+                        </td>
 
+               
+{{-- 
                         <td class="text-center">
                             @livewire('admin.editar-negociacion', ['negociacion' => $negociacion],key($negociacion->id))
-                        </td>
+                        </td> --}}
                        
                         
                     </tr>

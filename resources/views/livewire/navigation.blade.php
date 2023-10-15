@@ -11,7 +11,8 @@
         <div class="flex-1 hidden md:block">
             <div class="flex justify-center">
             <a  :class="{'bg-opacity-100 text-teal-500' : open}"
-                x-on:click="show_idioma()"
+                x-on:click="show()"
+                x-on:click.away="close()"
                 class="flex flex-col items-center justify-center order-last md:order-first px-6  md:px-4 bg-white bg-opacity-25 text-white cursor-pointer font-semibold">
                 <svg class=" h-10 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                     <path class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -91,20 +92,20 @@
 
             @endauth
         </div>
-</div>
+    </div>
 
 
-    <div id="navigation-menu" :class="{'block': open, 'hidden': !open}" class="bg-opacity-50 absolute hidden w-full">
+    <nav id="navigation-menu"  :class="{'block': open, 'hidden': !open}" class="bg-opacity-50 absolute hidden w-full">
         {{-- Menu computadora --}}
-        <div class="h-full hidden md:block container">
-            <div class="grid grid-cols-5 relative border-blue-400">
-                <div class="col-span-1 bg-gray-100 ">
+        <div  class="container h-full hidden md:block ">
+            <div   class="grid grid-cols-5 relative border-blue-400" >
+                <div    class="col-span-1 bg-gray-100 ">
                     <ul class=" mt-4 ml-4">
 
                         <p class="font-bold text-gray-700">IDIOMAS</p>
                         
                         <li class="navigation-link text-gray-700 font-semibold hover:bg-teal-400 hover:text-white">
-                            <a href="#" class="py-2 px-4 text-sm flex items-center">
+                            <a href="{{route('menu.cambiar_idioma','es')}}" class="py-2 px-4 text-sm flex items-center">
 
                                 <span class="flex justify-center">
                                         Español
@@ -115,7 +116,7 @@
                         </li>
 
                         <li class="navigation-link text-gray-700 font-semibold hover:bg-teal-400 hover:text-white">
-                            <a href="#" class="py-2 px-4 text-sm flex items-center">
+                            <a href="{{route('menu.cambiar_idioma','en')}}" class="py-2 px-4 text-sm flex items-center">
 
                                 <span class="flex justify-center">
                                         English
@@ -128,7 +129,7 @@
 
                 </div>
 
-                <div class="col-span-1 bg-gray-100 ">
+                <div  class="col-span-1 bg-gray-100 ">
                     <ul class=" mt-4 ml-4">
 
                         <p class="font-bold text-gray-700">TU CUENTA</p>
@@ -147,7 +148,7 @@
                             </li>
 
                             <li class="navigation-link text-gray-700 font-semibold hover:bg-teal-400 hover:text-white">
-                                <a href="#" class="py-2 px-4 text-sm flex items-center">
+                                <a href="{{ route('oficina.index') }}" class="py-2 px-4 text-sm flex items-center">
 
                                     <span class=" flex justify-center">
                                         Mi oficina
@@ -190,7 +191,7 @@
 
                 
 
-                <div class="col-span-1 bg-gray-100">
+                <div  class="col-span-1 bg-gray-100">
                     <ul class=" mt-4 ml-4">
 
                         <p class="font-bold text-gray-700">PRODUCTOS</p>
@@ -282,9 +283,7 @@
             
             </div>
         </div>
-
-      
-</div>
+    </nav>
 
     
 </header>

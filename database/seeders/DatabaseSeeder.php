@@ -23,6 +23,13 @@ class DatabaseSeeder extends Seeder
         $this->call(ProvinciaSeeder::class);
 
         $this->call(CategoriaSeeder::class);
+
         $this->call(ProductoSeeder::class);
+
+        $this->call(FaseSeeder::class);
+
+        $this->call(DocumentosSeeder::class);
+
+        $this->call(EstadosProcesosDocumentosSeeder::class);
     }
 }

@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('documentos', function (Blueprint $table) {
+        Schema::create('correos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
-            $table->string('name')->nullable();
-            $table->string('url')->nullable();
-            
-            $table->unsignedBigInteger('negotiation_id');
-            $table->foreign('negotiation_id')->references('id')->on('negociacions');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
 
+            $table->longText('comentario')->nullable();
+            $table->string('respuesta_adjunta')->nullable();
+            $table->string('respuesta_archivo')->nullable();
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('documentos');
+        Schema::dropIfExists('correos');
     }
 };

@@ -68,4 +68,14 @@ class User extends Authenticatable
     }
 
 
+    //Relacion uno a muchos
+
+    public function Solicitudes(){
+        return $this->hasMany(Solicitudes::class);
+    }
+
+    public function negociaciones(){
+        return $this->hasMany(Negociacion::class);
+    }
+
 }

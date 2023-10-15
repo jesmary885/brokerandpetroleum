@@ -21,6 +21,8 @@ class Producto extends Model
         return $this->belongsTo(Categoria::class);
     }
 
+    //Relacion uno a muchos
+
     public function Solicitudes(){
         return $this->hasMany(Solicitudes::class);
     }

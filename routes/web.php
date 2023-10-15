@@ -5,6 +5,7 @@ use App\Http\Controllers\Oficina\indexController;
 use App\Http\Controllers\Oficina\MensajesController;
 use App\Http\Controllers\Oficina\NegociacionesController;
 use App\Http\Controllers\Oficina\SolicitudesController;
+use App\Http\Controllers\OpcionesMenu;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
@@ -32,6 +33,9 @@ Route::get('search', SearchController::class)->name('search');
 
 Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 
+//opciones de menu
+Route::get('/cambiar_menu/{idioma}', [OpcionesMenu::class, 'cambiar_idioma'])->name('menu.cambiar_idioma');
+
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/oficina', [indexController::class, 'index'])->name('oficina.index');
@@ -41,6 +45,13 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/administracion/categorias', [AdministracionController::class, 'categorias'])->name('oficina.categorias');
     Route::get('/administracion/solicitudes', [AdministracionController::class, 'solicitudes'])->name('oficina.admin.solicitudes');
     Route::get('/administracion/negociaciones', [AdministracionController::class, 'negociaciones'])->name('oficina.admin.negociaciones');
+    Route::get('/administracion/fases', [AdministracionController::class, 'fases'])->name('oficina.admin.fases');
+    Route::get('/administracion/estados', [AdministracionController::class, 'estados'])->name('oficina.admin.estados');
+    Route::get('/administracion/documentos', [AdministracionController::class, 'documentos'])->name('oficina.admin.documentos');
+
+
+
+
 
     Route::get('/solicitudes', [SolicitudesController::class, 'index'])->name('oficina.solicitudes');
 

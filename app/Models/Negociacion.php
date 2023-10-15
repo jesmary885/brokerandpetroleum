@@ -22,7 +22,21 @@ class Negociacion extends Model
     }
 
     //Relacion uno a muchos inversa
+    public function fase(){
+        return $this->belongsTo(Fase::class);
+    }
+
+    //Relacion uno a muchos inversa
     public function proveedor(){
         return $this->belongsTo(Proveedor::class);
+    }
+
+    //Relacion muchos a muchos
+    /*public function documento_negociacion(){
+        return $this->belongsToMany(DocumentoNegociacion::class)->withPivot('documento_negociacion');
+    }*/
+
+    public function documentos(){
+        return $this->belongsToMany(Documentos::class)->withPivot('status','id');
     }
 }
