@@ -16,7 +16,7 @@ return [
     'mision'=> 'Misión',
     'vision'=> 'Visión',
     'mision_texto'=> 'Buscar, abrir y asegurar mercados para garantizar un flujo comercial constante de materia prima como lo es petróleo y sus derivados, dónde el resultado sea predecible para las refinerías y clientes con quienes operamos.',
-    'vision_texto'=> 'Ser el centro de formación líderes para el mercado petrolero en donde finanzas del mundo financiero, se afecten de manera positiva.',
+    'vision_texto'=> 'Ser el centro de formación líder para el mercado petrolero en donde finanzas del mundo financiero, se afecten de manera positiva.',
     'Mantengámonos'=> '¡Mantengámonos en contacto!',
     'Encuéntranos'=> 'Encuéntranos en cualquiera de estas plataformas, respondemos 1-2 días hábiles.',
     'Idiomas' => 'IDIOMAS',
