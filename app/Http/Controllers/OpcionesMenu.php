@@ -10,8 +10,9 @@ class OpcionesMenu extends Controller
     public function cambiar_idioma($idioma){
 
         session(['locale' => $idioma]);
-
         App::setLocale($idioma);
-
+        
+        return redirect(request()->header('Referer'));
     }
+    
 }

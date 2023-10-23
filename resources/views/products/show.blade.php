@@ -31,16 +31,26 @@
             </div>
 
             <div>
-                <h1 class="text-2xl font-bold text-gray-700">{{$product->name}}</h1>
+                @if(session('locale')=='es')
+                    <h1 class="text-2xl font-bold text-gray-700">{{$product->name_es}}</h1>
+                @else
+                    <h1 class="text-2xl font-bold text-gray-700">{{$product->name_en}}</h1>
+                @endif
+                
 
                 <div class="flex">
-                    <p class="text-trueGray-700">Categoria: {{$product->categoria->name}} </p>
+                    <p class="text-trueGray-700">{{__('messages.categoria')}} : {{$product->categoria->name}} </p>
                    
                 </div>
 
                 <div class="mt-4 text-gray-700">
-                    <h2 class="font-bold text-2xl">Descripción</h2>
-                    {!!$product->other_features!!}
+                    <h2 class="font-bold text-2xl">{{__('messages.Descripción')}} </h2>
+                    @if(session('locale')=='es')
+                        {!!$product->other_features_es!!}
+                    @else
+                        {!!$product->other_features_en!!}
+                    @endif
+        
                 </div>
 
                 @if($product->file)
@@ -48,7 +58,7 @@
                     <hr class="m-2 p-2">
 
 
-                    <p class="text-2xl font-semibold text-trueGray-700 mt-4">Documentos</p>
+                    <p class="text-2xl font-semibold text-trueGray-700 mt-4">{{__('messages.documentos')}}</p>
 
                 
                     <td class="text-center">
@@ -68,9 +78,9 @@
                 @else
 
                     <div class="flex justify-between mb-2 mt-2">
-                        <p>Haz click <a class="underline text-md text-gray-600 mx-1 px-1 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400" href="{{ route('login') }}">
-                                            aquí
-                                        </a> para iniciar sesión y solicitar información sobre este producto</p>
+                        <p>{{__('messages.Haz click')}}  <a class="underline text-md text-gray-600 mx-1 px-1 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400" href="{{ route('login') }}">
+                            {{__('messages.aquí')}} 
+                                        </a> {{__('messages.para iniciar sesión y solicitar información sobre este producto')}} </p>
                             
                                         
                                 

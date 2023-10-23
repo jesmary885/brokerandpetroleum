@@ -29,7 +29,7 @@
                             Estado
                         </th>
                         <th scope="col" class="px-6 py-3 text-center">
-                            Action
+                      
                         </th>
                     </tr>
                 </thead>
@@ -58,10 +58,15 @@
                             {{$solicitud->status}}
                         </td>
 
-                        <td class="text-center">
-                            @livewire('admin.responder-solicitud', ['solicitud' => $solicitud],key($solicitud->id))
-                        </td>
-                       
+                        @if($solicitud->status == 'Respuesta enviada')
+                            <td class="text-center">
+                                @livewire('solicitudes.respuesta', ['solicitud' => $solicitud],key($solicitud->id))
+                            </td>
+                        @else
+                            <td class="px-6 py-2 text-center">
+                                N/A
+                            </td>
+                        @endif                       
                         
                     </tr>
                     

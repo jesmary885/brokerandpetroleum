@@ -107,10 +107,9 @@
                 <div class="container mx-auto px-4">
                   <div class="flex flex-wrap text-left lg:text-left">
                     <div class="w-full lg:w-6/12 px-4">
-                      <h4 class="text-3xl fonat-semibold text-blueGray-200">¡Mantengámonos en contacto!</h4>
+                      <h4 class="text-3xl fonat-semibold text-blueGray-200">{{__('messages.Mantengámonos')}} </h4>
                       <h5 class="text-lg mt-0 mb-2 text-blueGray-300">
-                        Encuéntranos en cualquiera de estas plataformas, respondemos 1-2 días hábiles.
-                      </h5>
+                        {{__('messages.Encuéntranos')}} 
                       <div class="mt-6 lg:mb-0 mb-6">
                         <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                           <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">

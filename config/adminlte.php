@@ -304,47 +304,47 @@ return [
                 [
                     'text' => 'Usuarios',
                     'route'  => 'oficina.usuarios',
-                    'icon'    => '	fas fa-circle',
+                    'icon'    => '	fas fa-caret-right',
                     'icon_color' => 'gray',
                 ],
                 [
                     'text'    => 'Productos',
                     'route'     => 'oficina.productos',   
-                    'icon'    => '	fas fa-circle',
+                    'icon'    => '	fas fa-caret-right',
                     'icon_color' => 'gray',
                 ],
 
                 [
                     'text'    => 'Fases',
                     'route'     => 'oficina.admin.fases',
-                    'icon'    => '	fas fa-circle',
+                    'icon'    => '	fas fa-caret-right',
                     'icon_color' => 'gray',
                 ],
 
                 [
                     'text'    => 'Procesos y/o Documentación',
                     'route'     => 'oficina.admin.documentos',
-                    'icon'    => '	fas fa-circle',
+                    'icon'    => '	fas fa-caret-right',
                     'icon_color' => 'gray',
                 ],
 
                 [
                     'text'    => 'Estados de Procesos y/o Documentación',
                     'route'     => 'oficina.admin.estados',
-                    'icon'    => '	fas fa-circle',
+                    'icon'    => 'fas fa-caret-right',
                     'icon_color' => 'gray',
                 ],
                 
                 [
                     'text'    => 'Solicitudes',
                     'route'     => 'oficina.admin.solicitudes',
-                    'icon'    => '	fas fa-circle',
+                    'icon'    => '	fas fa-caret-right',
                     'icon_color' => 'gray',
                 ],
                 [
                     'text'    => 'Negociaciones',
                     'route'     => 'oficina.admin.negociaciones',
-                    'icon'    => '	fas fa-circle',
+                    'icon'    => '	fas fa-caret-right',
                     'icon_color' => 'gray',
                 ],
 
@@ -363,7 +363,7 @@ return [
             [
                 'text' => 'Mis solicitudes',
                 'route'  => 'oficina.solicitudes',
-                'icon'    => '	fas fa-circle',
+                'icon'    => '	fas fa-caret-right',
                 'icon_color' => 'gray',
     
             ],
@@ -377,7 +377,7 @@ return [
         'submenu' => [
             [
                 'text'    => 'Mis negociaciones',
-                'icon'    => '	fas fa-circle',
+                'icon'    => '	fas fa-caret-right',
                 'icon_color' => 'gray',
                 'route'  => 'oficina.negociaciones',
             ],

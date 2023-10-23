@@ -22,6 +22,7 @@ class Productos extends Component
     public function render()
     {
 
+      
         $productos = Producto::where('name', 'LIKE', '%' . $this->search . '%')
         ->latest('id')
         ->paginate(10);

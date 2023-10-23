@@ -1,7 +1,7 @@
 <div>
 
     <div wire:click="showModal" wire:loading.attr="disabled" class="p-2 text-white text-xs font-bold border rounded-lg cursor-pointer bg-red-600 text-center mt-4"> 
-        SOLICITUD DE PRESUPUESTO
+        {{__('messages.SOLICITUD_PRESUPUESTO')}}
     </div>
 
     <x-dialog-modal  class="flex items-center" wire:model="showingModal">
@@ -18,13 +18,13 @@
     
                 <div class="md:w-1/2">
                     <label class="block uppercase text-xs tracking-wide text-gray-800 mb-2">
-                        Tipo de solicitud
+                        {{__('messages.Tipo de solicitud')}}
                     </label>
                     <div class="relative">
                         <select wire:model="tipo" title="tipo" id="tipo" class="block w-full text-gray-400 py-2 px-4 pr-8 leading-tight rounded focus:outline-none focus:border-gray-500" name="tipo">
-                                <option value="" selected>Seleccione una opción</option>
-                                <option value="informacion">Información</option>
-                                <option value="presupuesto">Presupuesto</option>
+                                <option value="" selected>{{__('messages.Seleccione una opción')}}</option>
+                                <option value="informacion">{{__('messages.Información')}}</option>
+                                <option value="presupuesto">{{__('messages.Presupuesto')}}</option>
                         </select>
 
                         <x-input-error for="tipo" />
@@ -39,10 +39,10 @@
             <div class="mb-2 w-full">
                 <div >
                     <label class="block uppercase tracking-wide text-grey-darker text-xs mb-2" for="grid-password">
-                        Escriba su solicitud
+                        {{__('messages.Escriba su solicitud')}}
                     </label>
             
-                        <textarea wire:model.defer="mensaje" class=" w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" id="formGroupExampleInput" name="mensaje" cols="80" rows="2" placeholder="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae quidem autem molestias corrupti nesciunt recusandae. Itaque consectetur "></textarea>
+                        <textarea wire:model.defer="mensaje" class=" w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" id="formGroupExampleInput" name="mensaje" cols="80" rows="2"></textarea>
                         <x-input-error for="mensaje" />
                     </div>
                 </div>
@@ -53,14 +53,14 @@
             @if($tipo == "presupuesto")
 
                 <p class="font-bold text-gray-700 mb-2 uppercase tracking-wide text-grey-darker text-xs">
-                    Complete todos los campos
+                    {{__('messages.Complete todos los campos')}}
                 </p>
 
                 <hr>
 
                 <div class="flex justify-between w-full">
                     <div class=" mr-2">
-                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs" >Cantidad</label>
+                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs" >{{__('messages.Cantidad')}}</label>
                         <input type="text" wire:model="cantidad" class="form-control rounded py-1" id="formGroupExampleInput">
                         <x-input-error for="cantidad" />
                     </div>
@@ -69,19 +69,19 @@
                 <div class="flex justify-between">
 
                     <div class="form-group w-full mr-2">
-                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs">Unidad</label>
+                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs">{{__('messages.Cantidad')}}Unidad</label>
                         <select wire:model="unidad" title="unidad" id="unidad" class="block w-full text-gray-400 py-2 px-2 pr-8 leading-tight rounded focus:outline-none focus:border-gray-500" name="unidad">
-                            <option value="" selected>Seleccione una opción</option>
-                            <option value="unidad" selected>Unidad</option>
-                            <option value="litros">Litros</option>
-                            <option value="libras">Libras</option>
-                            <option value="piezas">Piezas</option>
-                            <option value="gramos">Gramos</option>
-                            <option value="frascos">Frascos</option>
-                            <option value="metros">Metros</option>
-                            <option value="metros_cuadrados">Metros cuadrados</option>
-                            <option value="metros_cubicos">Metros cúbicos</option>
-                            <option value="onzas">Onzas</option>
+                            <option value="" selected>{{__('messages.Seleccione una opción')}}</option>
+                            <option value="unidad" selected>{{__('messages.Unidad')}}</option>
+                            <option value="litros">{{__('messages.Litros')}}</option>
+                            <option value="libras">{{__('messages.Libras')}}</option>
+                            <option value="piezas">{{__('messages.Piezas')}}</option>
+                            <option value="gramos">{{__('messages.Gramos')}}</option>
+                            <option value="frascos">{{__('messages.Frascos')}}</option>
+                            <option value="metros">{{__('messages.Metros')}}</option>
+                            <option value="metros_cuadrados">{{__('messages.Metros cuadrados')}}</option>
+                            <option value="metros_cubicos">{{__('messages.Metros cúbicos')}}</option>
+                            <option value="onzas">{{__('messages.Onzas')}}</option>
                             <option value="mmlb">MMlb</option>
                         </select>
                         <x-input-error for="unidad" />
@@ -89,19 +89,19 @@
                     </div>
 
                     <div class="form-group w-full mr-2">
-                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs">Frecuencia</label>
+                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs">{{__('messages.Cantidad')}}Frecuencia</label>
                         <select wire:model="frecuencia" title="frecuencia" id="frecuencia" class="block w-full text-gray-400 py-2 px-2 pr-8 leading-tight rounded focus:outline-none focus:border-gray-500" name="frecuencia">
-                            <option value="" selected>Seleccione una opción</option>
-                            <option value="diario">Diario</option>
-                            <option value="semanal">Semanal</option>
-                            <option value="quincenal">Quincenal</option>
-                            <option value="mensual">Mensual</option>
-                            <option value="bimenstral">Bimestral</option>
-                            <option value="trimestral">Trimestral</option>
-                            <option value="semestral">Semestral</option>
-                            <option value="anual">Anual</option>
-                            <option value="unica_vez">Única vez</option>
-                            <option value="para_pruebas">Para pruebas</option>
+                            <option value="" selected>{{__('messages.Seleccione una opción')}}</option>
+                            <option value="diario">{{__('messages.Diario')}}</option>
+                            <option value="semanal">{{__('messages.Semanal')}}</option>
+                            <option value="quincenal">{{__('messages.Quincenal')}}</option>
+                            <option value="mensual">{{__('messages.Mensual')}}</option>
+                            <option value="bimenstral">{{__('messages.Bimestral')}}</option>
+                            <option value="trimestral">{{__('messages.Trimestral')}}</option>
+                            <option value="semestral">{{__('messages.Semestral')}}</option>
+                            <option value="anual">{{__('messages.Anual')}}</option>
+                            <option value="unica_vez">{{__('messages.Única vez')}}</option>
+                            <option value="para_pruebas">{{__('messages.Para pruebas')}}</option>
                         </select>
                         <x-input-error for="frecuencia" />
                         
@@ -109,11 +109,11 @@
 
 
                     <div class="form-group w-full">
-                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs">Uso del producto</label>
+                        <label class="w-full text-justify block uppercase tracking-wide text-grey-darker text-xs">{{__('messages.Uso del producto')}}</label>
                         <select wire:model="uso" title="uso" id="uso" class="block w-full text-gray-400 py-2 px-2 pr-8 leading-tight rounded focus:outline-none focus:border-gray-500" name="uso">
-                            <option value="" selected>Seleccione una opción</option>
-                            <option value="consumo_propio">Consumo propio</option>
-                            <option value="reventa">Reventa</option>
+                            <option value="" selected>{{__('messages.Seleccione una opción')}}</option>
+                            <option value="consumo_propio">{{__('messages.Consumo propio')}}</option>
+                            <option value="reventa">{{__('messages.Reventa')}}</option>
     
                         </select>
                         <x-input-error for="uso" />
@@ -123,7 +123,7 @@
 
                 <div class="flex justify-between w-full">
                     <div class="form-group w-full">
-                        <label class="w-full text-justify uppercase tracking-wide text-grey-darker text-xs form-control ">Fecha requerida</label>
+                        <label class="w-full text-justify uppercase tracking-wide text-grey-darker text-xs form-control ">{{__('messages.Fecha requerida')}}</label>
                         <div>
                             <div wire:ignore x-data="datepicker()">
                                 <div class="flex flex-col">
@@ -147,7 +147,7 @@
 
                 <div >
 
-                    <label class="text-justify uppercase tracking-wide text-grey-darker text-xs form-control block">Comentarios</label>
+                    <label class="text-justify uppercase tracking-wide text-grey-darker text-xs form-control block">{{__('messages.Comentarios')}}</label>
                     <textarea wire:model.defer="mensaje" class=" w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" id="formGroupExampleInput" name="mensaje" cols="80" rows="2" placeholder="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae quidem autem molestias corrupti nesciunt recusandae. Itaque consectetur "></textarea>
 
                     <x-input-error for="mensaje" />
@@ -161,7 +161,7 @@
 
         <x-slot name="footer">
             <x-danger-button wire:click="save" wire:loading.attr="disabled" wire:target="editImage, update">
-                Enviar
+                {{__('messages.Enviar')}}
             </x-danger-button>
         </x-slot>
 

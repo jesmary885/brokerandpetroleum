@@ -22,6 +22,20 @@ switch ($width) {
     case '48':
         $width = 'w-48';
         break;
+    
+    case '128':
+        $width = 'w-128';
+        break;
+    
+    case '142':
+        $width = 'w-142';
+        break;
+
+    case '152':
+        $width = 'w-152';
+        break;
+
+
 }
 @endphp
 

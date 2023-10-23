@@ -36,6 +36,7 @@ Route::get('products/{product}', [ProductController::class, 'show'])->name('prod
 //opciones de menu
 Route::get('/cambiar_menu/{idioma}', [OpcionesMenu::class, 'cambiar_idioma'])->name('menu.cambiar_idioma');
 
+
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/oficina', [indexController::class, 'index'])->name('oficina.index');

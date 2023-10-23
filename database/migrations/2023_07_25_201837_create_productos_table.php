@@ -18,8 +18,12 @@ return new class extends Migration
             $table->unsignedBigInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categorias');
 
-            $table->string('name');
-            $table->string('other_features')->nullable();
+            $table->string('name_es');
+            $table->string('other_features_es')->nullable();
+
+            $table->string('name_en');
+            $table->string('other_features_en')->nullable();
+
             $table->string('phone')->nullable();
             $table->string('country')->nullable();
             $table->string('city')->nullable();

@@ -4,9 +4,9 @@
         <div class="hidden bg-cover lg:block lg:w-2/3" style='background-image: url(img/BALANCIN.jpg);'>
             <div class="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
                 <div>
-                    <h2 class="text-5xl font-bold text-white">Registro de usuario</h2>
+                    <h2 class="text-5xl font-bold text-white">{{__('messages.Registro de usuario')}}</h2>
                     
-                    <p class="max-w-xl mt-5 text-gray-300">Bienvenido, registrate en nuestro portal completando todos los datos.</p>
+                    <p class="max-w-xl mt-5 text-gray-300">{{__('messages.Bienvenido, registrate en nuestro portal completando todos los datos.')}}</p>
                 </div>
             </div>
         </div>
@@ -22,14 +22,14 @@
                 
 
                 <p class="mt-4 text-gray-500 dark:text-gray-400">
-                    ¿Ya tienes una cuenta? Puedes iniciar sesión <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                                Aquí
+                    {{__('messages.Ya tienes una cuenta? Puedes iniciar sesión')}} <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                        {{__('messages.Aquí')}}
                     </a> 
                 </p>
 
                     <div class="flex justify-between mt-6">
                         <div class="w-full mr-2">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.Nombre')}}</label>
                             
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="w-full">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Last name</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.Apellido')}}</label>
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
                                     <i class="fas fa-id-card text-blue-500"></i>
@@ -57,7 +57,7 @@
 
                     <div class="flex justify-between mt-4">
                         <div class="w-full mr-2">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Phone number</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.Telefono')}}</label>
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
                                     <i class="fas fa-phone text-blue-500"></i>
@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="w-full">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.Dirección de correo electrónico')}}</label>
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
                                     <i class="fas fa-envelope-open text-blue-500"></i>
@@ -82,13 +82,13 @@
 
                     <div class="flex justify-between mt-4">
                         <div class="w-full mr-2">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Country</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.pais')}}</label>
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
                                     <i class="fas fa-map-marker-alt text-blue-500"></i>
                                 </div>
                                 <select wire:model.lazy="country_id" class="block w-full bg-gray-50 border border-gray-200 text-gray-400 py-1 pl-8 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                                    <option value="" selected>Seleccione una opción</option>
+                                    <option value="" selected>{{__('messages.Seleccione una opción')}}</option>
                                     @foreach ($countries as $country)
                                         <option value="{{$country->id}}">{{$country->name}}</option>
                                     @endforeach
@@ -101,13 +101,13 @@
                        
 
                         <div class="w-full mr-2">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Province</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.provincia')}}</label>
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
                                     <i class="fas fa-map-marker-alt text-blue-500"></i>
                                 </div>
                                 <select wire:model.lazy="provincia_id" class="block w-full bg-gray-50 border border-gray-200 text-gray-400 py-1 px-4 pr-8 pl-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                                    <option value="" selected>Seleccione una opción</option>
+                                    <option value="" selected>{{__('messages.Seleccione una opción')}}</option>
                                     @foreach ($provincias as $provincia)
                                         <option value="{{$provincia->id}}">{{$provincia->name}}</option>
                                     @endforeach
@@ -120,7 +120,7 @@
                     <div class="flex justify-between mt-4">
 
                         <div class="w-full mr-2">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Password</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.Contraseña')}}</label>
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
                                     <i class="fas fa-user-lock text-blue-500"></i>
@@ -131,7 +131,7 @@
                         </div>
 
                         <div class="w-full">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Confirm password</label>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{{__('messages.Confirmar Contraseña')}}</label>
                             <div class="relative">
                                 <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-40">
                                     <i class="fas fa-user-lock text-blue-500"></i>
@@ -165,7 +165,7 @@
 
                         <button
                             class="flex mt-4 items-center px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" wire:click="save" > 
-                            <span>Sign Up </span>
+                            <span>{{__('messages.Registrar')}} </span>
 
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd"

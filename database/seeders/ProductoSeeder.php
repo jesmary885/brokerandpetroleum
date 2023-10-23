@@ -16,9 +16,11 @@ class ProductoSeeder extends Seeder
     {
         $productos = [
             [
-                'name' => 'Producto 1',
+                'name_es' => 'Merey16',
+                'name_en' => 'Merey16 ',
                 'categoria_id' => 1,
-                'other_features' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
                 'phone' => '555-8866-55',
                 'country' => 'Contrary to',
                 'city' => 'ciudad',
@@ -28,9 +30,11 @@ class ProductoSeeder extends Seeder
 
             ],
             [
-                'name' => 'Producto 2',
+                'name_es' => 'Full oil',
+                'name_en' => 'Full oil',
                 'categoria_id' => 2,
-                'other_features' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
                 'phone' => '555-8866-74',
                 'country' => 'Contrary to',
                 'city' => 'ciudad',
@@ -39,9 +43,11 @@ class ProductoSeeder extends Seeder
          
             ],
             [
-                'name' => 'Producto 3',
+                'name_es' => 'Jeta1',
+                'name_en' => 'Jeta1',
                 'categoria_id' => 3,
-                'other_features' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
                 'phone' => '555-8866-12',
                 'country' => 'Contrary to',
                 'city' => 'ciudad',
@@ -50,9 +56,66 @@ class ProductoSeeder extends Seeder
         
             ],
             [
-                'name' => 'Producto 4',
+                'name_es' => 'En590',
+                'name_en' => 'En590',
                 'categoria_id' => 4,
-                'other_features' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'phone' => '555-8866',
+                'country' => 'Contrary to',
+                'city' => 'ciudad',
+                'page_view' => 'si',
+                'status' => 'Activo'
+         
+            ],
+
+            [
+                'name_es' => 'Gasolina',
+                'name_en' => 'Gasolina',
+                'categoria_id' => 4,
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'phone' => '555-8866',
+                'country' => 'Contrary to',
+                'city' => 'ciudad',
+                'page_view' => 'si',
+                'status' => 'Activo'
+            ],
+
+            [
+                'name_es' => 'D6',
+                'name_en' => 'D6',
+                'categoria_id' => 4,
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'phone' => '555-8866',
+                'country' => 'Contrary to',
+                'city' => 'ciudad',
+                'page_view' => 'si',
+                'status' => 'Activo'
+         
+            ],
+
+            [
+                'name_es' => 'Jp54',
+                'name_en' => 'Jp54',
+                'categoria_id' => 4,
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'phone' => '555-8866',
+                'country' => 'Contrary to',
+                'city' => 'ciudad',
+                'page_view' => 'si',
+                'status' => 'Activo'
+         
+            ],
+
+            [
+                'name_es' => 'D2',
+                'name_en' => 'D2',
+                'categoria_id' => 4,
+                'other_features_es' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
+                'other_features_en' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don.',
                 'phone' => '555-8866',
                 'country' => 'Contrary to',
                 'city' => 'ciudad',

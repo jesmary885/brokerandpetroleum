@@ -13,7 +13,7 @@ class ProductoCreate extends Component
 
     use WithFileUploads;
 
-    public $isopen = false, $categorias, $categoria_id, $name, $other_features, $file;
+    public $isopen = false, $categorias, $categoria_id, $name_es, $other_features_es, $file, $name_en, $other_features_en;
     public $accion,$producto, $estado = 'inactivo';
 
     public function mount(Producto $producto, $accion){
@@ -23,8 +23,10 @@ class ProductoCreate extends Component
         $this->categorias = Categoria::all();
         if($producto){
             $this->categoria_id = $producto->categoria_id;
-            $this->name = $producto->name;
-            $this->other_features = $producto->other_features;
+            $this->name_es = $producto->name_es;
+            $this->other_features_es = $producto->other_features_es;
+            $this->name_en = $producto->name_en;
+            $this->other_features_en = $producto->other_features_en;
         }
 
         
@@ -42,9 +44,11 @@ class ProductoCreate extends Component
 
     protected $rules = [
         'estado' => 'required',
-        'name' => 'required|max:30',
+        'name_es' => 'required|max:30',
         'categoria_id' => 'required',
-        'other_features' => 'required',
+        'other_features_es' => 'required',
+        'name_en' => 'required|max:30',
+        'other_features_en' => 'required',
     ];
 
 
@@ -65,9 +69,11 @@ class ProductoCreate extends Component
 
         if($this->accion == 'create'){
             $producto = new Producto();
-            $producto->name = $this->name;
+            $producto->name_es = $this->name_es;
             $producto->categoria_id = $this->categoria_id;
-            $producto->other_features = $this->other_features;
+            $producto->other_features_es = $this->other_features_es;
+            $producto->name_en = $this->name_en;
+            $producto->other_features_en = $this->other_features_en;
             $producto->file = $url;
             $producto->page_view = $page_view;
             $producto->status = 'Activo';
@@ -77,8 +83,10 @@ class ProductoCreate extends Component
 
         else{
             $this->producto->update([
-                'name' => $this->name,
-                'other_features' => $this->other_feactures,
+                'name_es' => $this->name_es,
+                'other_features_es' => $this->other_feactures_es,
+                'name_en' => $this->name_en,
+                'other_features_en' => $this->other_feactures_en,
                 'categoria_id' => $this->categoria_id,
                 'file' => $url,
                 'page_view' => $page_view
@@ -87,7 +95,7 @@ class ProductoCreate extends Component
         }
 
        
-        $this->reset(['name','file','other_features','categoria_id','isopen']);
+        $this->reset(['name_es','file','other_features_es','categoria_id','isopen','name_en','other_features_en']);
         $this->emitTo('admin.productos','render');
 
         $this->emit('alert','Datos registrados correctamente');

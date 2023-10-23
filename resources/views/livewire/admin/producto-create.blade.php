@@ -32,31 +32,53 @@
                         </div>
                         <div class="flex justify-between">
                                 <div class="w-full mr-2">
-                                    <label class="w-full text-justify text-gray-800 font-bold">Nombre</label>
-                                    <input type="text" wire:model="name" class="form-control rounded" id="formGroupExampleInput">
+                                    <label class="w-full text-justify text-gray-800 font-bold">Nombre (español)</label>
+                                    <input type="text" wire:model="name_es" class="form-control rounded" id="formGroupExampleInput">
                                 </div>
 
-                                <div class="w-full">
-                                    <label class="w-full text-justify text-gray-800 font-bold">Categoría</label>
-
-                                    <select wire:model="categoria_id" title="Categoria" class="block w-full text-gray-400 py-2 px-2 pr-8 leading-tight rounded focus:outline-none focus:border-gray-500">
-                                        <option value="" selected>Seleccione una opción</option>
-                                            @foreach ($categorias as $categoria)
-                                        <option value="{{$categoria->id}}">{{$categoria->name}}</option>
-                                        @endforeach
-                                    </select>
-                                    <x-input-error for="categoria_id" />
+                                <div class="w-full mr-2">
+                                    <label class="w-full text-justify text-gray-800 font-bold">Nombre (english)</label>
+                                    <input type="text" wire:model="name_en" class="form-control rounded" id="formGroupExampleInput">
                                 </div>
+
+                                
+                        </div>
+
+                        <div class="flex justify-between mt-2">
+                            
+
+                            <div class="w-1/2">
+                                <label class="w-full text-justify text-gray-800 font-bold">Categoría</label>
+
+                                <select wire:model="categoria_id" title="Categoria" class="block w-full text-gray-400 py-2 px-2 pr-8 leading-tight rounded focus:outline-none focus:border-gray-500">
+                                    <option value="" selected>Seleccione una opción</option>
+                                        @foreach ($categorias as $categoria)
+                                    <option value="{{$categoria->id}}">{{$categoria->name}}</option>
+                                    @endforeach
+                                </select>
+                                <x-input-error for="categoria_id" />
+                            </div>
+                    </div>
+
+                        <div class="mt-4 mb-2 w-full">
+                              
+                            <label class="w-full text-justify text-gray-800 font-bold">
+                                Caracteristicas (español)
+                            </label>
+                            
+                            <textarea wire:model.defer="other_features" class=" w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" cols="80" rows="2" ></textarea>
+                            <x-input-error for="other_features_es" />
+                     
                         </div>
 
                         <div class="mt-4 mb-2 w-full">
                               
                             <label class="w-full text-justify text-gray-800 font-bold">
-                                Caracteristicas
+                                Caracteristicas (english)
                             </label>
                             
-                            <textarea wire:model.defer="other_features" class=" w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" cols="80" rows="2" placeholder="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae quidem autem molestias corrupti nesciunt recusandae. Itaque consectetur "></textarea>
-                            <x-input-error for="other_features" />
+                            <textarea wire:model.defer="other_features" class=" w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" cols="80" rows="2" ></textarea>
+                            <x-input-error for="other_features_en" />
                      
                         </div>
 

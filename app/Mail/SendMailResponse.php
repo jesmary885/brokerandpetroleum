@@ -23,7 +23,7 @@ class SendMailResponse extends Mailable
 
     public function build()
     {
-        return $this->from('jesmarydelvalle62@gmail.com')
+        return $this->from('petroleum@brokergroup.online')
                     ->view('mails.email')
                     ->subject($this->content->subject)
                     //->text('mails.email_plain')

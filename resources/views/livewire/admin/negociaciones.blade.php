@@ -55,18 +55,15 @@
                         </td>
                         
                         <td class=" text-center">
-                            @livewire('admin.detalle-negociacion', ['negociacion' => $negociacion],key($negociacion->id))
+                            @livewire('admin.detalle-negociacion', ['negociacion' => $negociacion],key(01.,'$negociacion->id'))
                         </td>
 
                         <td class=" text-center">
-                            @livewire('admin.negociaciones-avances', ['negociacion' => $negociacion],key($negociacion->id))
+                            @livewire('admin.negociaciones-avances', ['negociacion' => $negociacion],key(02.,'$negociacion->id'))
                         </td>
 
-
-             
-
                         <td class="text-center">
-                            @livewire('admin.editar-negociacion', ['negociacion' => $negociacion],key($negociacion->id))
+                            @livewire('admin.editar-negociacion', ['negociacion' => $negociacion],key(03.,'$negociacion->id'))
                         </td>
                        
                         

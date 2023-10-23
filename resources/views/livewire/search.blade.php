@@ -2,7 +2,7 @@
     
     <form action="{{ route('search') }}" autocomplete="off">
 
-        <x-input name="name" wire:model="search" type="text" class="w-full placeholder-gray-300" placeholder="¿Estás buscando algún producto?" />
+        <x-input name="name" wire:model="search" type="text" class="w-full placeholder-gray-300" placeholder="{{__('messages.Estas buscando un producto?')}}" />
 
         <button class="absolute top-0 right-0 w-12 h-full bg-gray-400 flex items-center justify-center rounded-r-md">
             <x-search size="35" color="white" />
@@ -23,7 +23,7 @@
                     </a>
                 @empty
                     <p class="text-lg leading-5">
-                        No existe ningún registro con los parametros especificados
+                        {{__('messages.No existe ningún registro')}}
                     </p>
                 @endforelse
             </div>

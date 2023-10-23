@@ -58,11 +58,16 @@
                                 <div class="py-4 px-6">
                                         <h1 class="text-lg font-semibold">
                                             <a href="#">
-                                                {{$product->name}}
+                                              @if(session('locale')=='es')
+                                                {{$product->name_es}}
+                                              @else
+                                                {{$product->name_en}}
+                                              @endif
+                                              
                                             </a>
                                         </h1>
 
-                                        <p class="font-bold text-trueGray-700">otro dato</p>
+                                     
                                 </div>
                                 </article>
                             </a>
@@ -116,7 +121,7 @@
               <div>
                 <div class="w-full text-center">
                   <h1 class="text-white font-semibold text-5xl ">
-                    Somos Broker & Petroleum
+                    {{__('messages.Somos Broker & Petroleum')}}
                   </h1>
 
                 </div>
@@ -124,7 +129,7 @@
                 <div class="w-full text-center mt-8">
                
                     <p class="mt-4 text-lg text-blueGray-200 lg:mx-52">
-                      Empresa encargada de comercializar y distribuir productos derivados del petróleo. Nuestro proposito principal es garantizar calidad de servicio y de producto, ofreciendo transparencia, confiabilidad, y los mejores precios del mercado. Somos un equipo de trabajo que constantemente se encuentra mejorando habilidades y conocimientos para satisfacer las crecientes y diversas necesidades de nuestros proveedores y clientes.
+                      {{__('messages.Empresa encargada')}}
                     </p>
 
         
@@ -148,9 +153,9 @@
                   <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                     <i class="fas fa-award"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">Misión</h6>
+                  <h6 class="text-xl font-semibold">{{__('messages.mision')}} </h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    Buscar, abrir y asegurar mercados para garantizar un flujo comercial constante de materia  prima como lo es petróleo y sus derivados, dónde el resultado sea predecible para las refinerías y clientes con quienes operamos. 
+                    {{__('messages.mision_texto')}}
                 </div>
               </div>
             </div>
@@ -163,9 +168,9 @@
                   <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                     <i class="fas fa-award"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">Visión</h6>
+                  <h6 class="text-xl font-semibold">{{__('messages.vision')}}</h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                  Ser el centro de formación líderes para el mercado petrolero en donde finanzas del mundo financiero, se afecten de manera positiva.
+                    {{__('messages.vision_texto')}}
                   </p>
 
                   <p class=" mb-10  text-white">

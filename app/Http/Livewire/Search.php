@@ -25,9 +25,17 @@ class Search extends Component
          //Tv de 32" Full HD
 
          if ($this->search) {
-            $products = Producto::where('name', 'LIKE' ,'%' . $this->search . '%')
-                                ->take(8)
-                                ->get();
+
+            if(session('locale')=='es'){
+                $products = Producto::where('name_es', 'LIKE' ,'%' . $this->search . '%')
+                    ->take(8)
+                    ->get();
+            }
+            else{
+                $products = Producto::where('name_en', 'LIKE' ,'%' . $this->search . '%')
+                    ->take(8)
+                    ->get();
+            }
         } else {
             $products = [];
         }
